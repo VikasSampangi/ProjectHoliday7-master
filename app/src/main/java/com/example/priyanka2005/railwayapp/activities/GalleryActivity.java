@@ -29,8 +29,7 @@ public class GalleryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
 
         final Integer[] image = new Integer[]{R.drawable.image1, R.drawable.image2, R.drawable.image3,
                 R.drawable.image4, R.drawable.image5, R.drawable.image6,
@@ -79,7 +78,7 @@ public class GalleryActivity extends AppCompatActivity {
                 Holder = (ViewHolder)convertView.getTag();
             }
             Holder.IMAGE.setImageResource(Image[position]);
-            Holder.IMAGE.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+            Holder.IMAGE.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
             return convertView;
         }
